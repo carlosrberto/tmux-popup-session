@@ -19,7 +19,7 @@ you left off. (Inside the popup you can even hop between apps with `prefix`+numb
 ### With [TPM](https://github.com/tmux-plugins/tpm)
 
 ```tmux
-set -g @plugin 'youruser/tmux-popup-session'
+set -g @plugin 'carlosrberto/tmux-popup-session'
 ```
 
 ### Manual
@@ -55,16 +55,16 @@ Reload with `tmux source-file ~/.tmux.conf`.
 
 ### Options
 
-| Option | Default | Scope |
-| --- | --- | --- |
-| `@popup-session-apps` | — | list of app names to bind |
-| `@popup-session-<name>-key` | — (required) | the prefix key for that app |
-| `@popup-session-<name>-cmd` | the app name | command run for that app |
-| `@popup-session-<name>-window` | the app name | window name in the session |
-| `@popup-session-<name>-width` / `-height` | global default | per-app popup size |
-| `@popup-session-name` | `TmuxPopup` | shared session name |
-| `@popup-session-width` / `-height` | `80%` | global popup size |
-| `@popup-session-status` | `off` | inner status bar (`on` shows window tabs) |
+| Option                                    | Default        | Scope                                     |
+| ----------------------------------------- | -------------- | ----------------------------------------- |
+| `@popup-session-apps`                     | —              | list of app names to bind                 |
+| `@popup-session-<name>-key`               | — (required)   | the prefix key for that app               |
+| `@popup-session-<name>-cmd`               | the app name   | command run for that app                  |
+| `@popup-session-<name>-window`            | the app name   | window name in the session                |
+| `@popup-session-<name>-width` / `-height` | global default | per-app popup size                        |
+| `@popup-session-name`                     | `TmuxPopup`    | shared session name                       |
+| `@popup-session-width` / `-height`        | `80%`          | global popup size                         |
+| `@popup-session-status`                   | `off`          | inner status bar (`on` shows window tabs) |
 
 The command runs through a login+interactive shell, so shell **functions** and
 **aliases** work as commands (not just binaries on `PATH`).
@@ -75,7 +75,7 @@ The command runs through a login+interactive shell, so shell **functions** and
 - **`prefix` then `d`** — detach: closes the popup, the app keeps running (state
   preserved). This is the everyday "close".
 - **`Esc`** and other keys — go straight into the app (no conflict).
-- The app's own quit (e.g. `q`) exits *that app's window*; reopening relaunches it.
+- The app's own quit (e.g. `q`) exits _that app's window_; reopening relaunches it.
 
 ## How it works
 
